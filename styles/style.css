@@ -1,0 +1,9 @@
+#welcome_text{
+    background-color: greenyellow;
+}
+
+#container{
+    background-color: rgb(192, 192, 192);
+    width: 3000;
+    height: 1200
+}
