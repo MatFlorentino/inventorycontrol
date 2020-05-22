@@ -4,7 +4,7 @@
 <head>
   <title>Meu app</title>
   <link rel="stylesheet" href="styles/style.css">
-
+  <script type="text/javascript" src="script.js"></script>
   <script>
     const { remote } = require('electron')
     const mainWindow = remote.getCurrentWindow()
@@ -17,14 +17,29 @@
 
 <body>
   <div id='container'>
-    <h1 id='welcome_text'>Bem vindo ao meu programa</h1>
-    <h2>Dev: MATEUS FLORENTINO</h2>
-    <H6>We are using node
-      <script>document.write(process.versions.node)</script>,
-      Chrome
-      <script>document.write(process.versions.chrome)</script>,
-      and Electron
-      <script>document.write(process.versions.electron)</script>.</H6>
+    <div id='cabecalho'>
+      <h1 id='welcome_text'>Bem vindo ao meu programa</h1>
+      <h2>Dev: MATEUS FLORENTINO</h2>
+      <H6>We are using node
+        <script>document.write(process.versions.node)</script>,
+        Chrome
+        <script>document.write(process.versions.chrome)</script>,
+        and Electron
+        <script>document.write(process.versions.electron)</script>.</H6>
+    </div>
+    <div id='menu'>
+
+      <div id=add>
+        <input type="text" id='add_in'>
+        <button id='add_button'>Adicionar</botton>
+      </div>
+      <div id=del>
+        <input type="text" id='del_in'>
+        <button id='del_button'>Deletar</botton>
+      </div>
+
+    </div>
+
   </div>
 </body>
 
