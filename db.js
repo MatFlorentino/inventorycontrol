@@ -1,8 +1,33 @@
 //https://blog.logrocket.com/the-complete-guide-to-using-localstorage-in-javascript-apps-ba44edb53a36/
 
-function update(name, value){
+function update(){
+    var parent = document.getElementById('lista')
+    var itens = parent.getElementsByTagName('li')
+    
+    for(i=itens.length-1;i>=0;i--){
+    parent.removeChild(itens[i])
+    }
+
+    show_itens();
+}
+
+function show_itens(){
+    document.getElementById('lista')
+
+    for (var i = 0; i < localStorage.length; i++){
+        var item = document.createElement('li')
+        var text = document.createTextNode(localStorage.key(i))
+        item.appendChild(text)
+        document.getElementById('lista').appendChild(item)
+    }
+}
+
+function remove(){
+    var name = document.getElementById('del_in').value
     window.localStorage.removeItem(name)
-    window.localStorage.setItem(name, value)
+
+    update();
+
 }
 
 function create(){
@@ -15,18 +40,12 @@ function create(){
     document.getElementById('lista').appendChild(item)
 }
 
-function remove(){
-    console.log('well')
-    var name = document.getElementById('del_in').value
-    window.localStorage.removeItem(name)
+
+
+function clears(){
+    console.log('a')
+    window.localStorage.clear()
+    update()
 }
 
-function clear(){
-    window.localStorage.clear
-}
 
-function itens(){
-    for (var i = 0; i < localStorage.length; i++){
-        console.log(localStorage.getItem(localStorage.key(i)))
-    }
-}
