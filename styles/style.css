@@ -1,39 +1,10 @@
-#welcome_text{
-    background-color: #008b8b;
-}
-
-#container{
+#container {
     position: fixed;
-    background-color: #008b8b;
-    height: 100%;
-    width: 100%
-}
-#cabecalho{
-    background-color: rgba(8, 104, 121, 0.445);
-    position: fixed;
+    background-color: rgb(37, 128, 116);
     width: 100%;
-}
-#menu{
-    background-color: darkgoldenrod;
-    position: relative;
-    top: 120px;
-    height: 100px;
-    width: 250px
-}
-#add{
-    background-color: skyblue;
-    height: 50px;
-    width: 250px
-}
-#del{
-    background-color: green;
-    height: 50px;
-    width: 250px
+    height: 100%
 }
 
-#lista{
-    position: relative;
-    height: 3000px;
-    width: 1000px;
-    background-color: #008b8b;
+.itens{
+    background-color: rgb(209, 205, 205);
 }
