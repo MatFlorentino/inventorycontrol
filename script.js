@@ -24,6 +24,7 @@ function update() {
 
         var btn = document.createElement('button')
         btn.innerText = "-"
+        btn.className = 'btn'
         btn.onclick = function () {
             decrease(elemento.nome)
             update()
@@ -32,6 +33,7 @@ function update() {
         
         var btn = document.createElement('button')
         btn.innerText = "+"
+        btn.className = 'btn'
         btn.onclick = function () {
             increase(elemento.nome)
             update()
