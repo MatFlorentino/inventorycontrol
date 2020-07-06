@@ -19,12 +19,18 @@
     <div id='cabecalho'>
       <h1 id='welcome_text'>Bem vindo ao meu programa</h1>
       <h4>Dev: MATEUS FLORENTINO</h4>
-      <input type="text" id="NewItem" class='input' placeholder="nome do item">
-      <button onclick=create() class='btn'>novo</button>
-      <input type="text" id="DeleteItem" class='input' placeholder="nome do item">
-      <button onclick=remove() class='btn'>deletar</button>
+      <div id="interactive">
+        <div id="new" class='interactive'>
+          <input type="text" id="NewItem" class='input' placeholder="nome do item">
+          <button onclick=create() class='btn'>novo</button>
+        </div>
+        <div id="delete" class='interactive'>
+          <input type="text" id="DeleteItem" class='input' placeholder="nome do item">
+          <button onclick=remove() class='btn'>deletar</button>
+        </div>
+      </div>
 
-     
+
     </div>
     <div id="lista">
 

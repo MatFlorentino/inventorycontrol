@@ -1,6 +1,3 @@
-//https://blog.logrocket.com/the-complete-guide-to-using-localstorage-in-javascript-apps-ba44edb53a36/
-
-
 function update() {
     var container = document.getElementById('lista')
 
@@ -8,10 +5,8 @@ function update() {
         container.innerHTML = "";
     }
 
-
-
     const itens = showAll()
-    //pode-se utilizar o indice na arrow function usando a sintese itens.foreach((iten, index)=>)...
+
     itens.forEach((elemento) => {
 
         var container = document.createElement('div')
@@ -22,6 +17,10 @@ function update() {
 
         container.appendChild(item)
 
+
+        var btnContainer = document.createElement('div')
+        btnContainer.className = 'btnDiv'
+
         var btn = document.createElement('button')
         btn.innerText = "-"
         btn.className = 'btn'
@@ -29,7 +28,7 @@ function update() {
             decrease(elemento.nome)
             update()
         }
-        container.appendChild(btn)
+        btnContainer.appendChild(btn)
         
         var btn = document.createElement('button')
         btn.innerText = "+"
@@ -38,36 +37,25 @@ function update() {
             increase(elemento.nome)
             update()
         }
+        btnContainer.appendChild(btn)
 
-
-        container.appendChild(btn)
-
+        container.appendChild(btnContainer)
+        
         document.getElementById('lista').appendChild(container)
     })
 }
-//ate aqui funfando completar update()
 
 function remove() {
     var name = document.getElementById('DeleteItem').value
     deleteItem(name)
     update()
-
-    //  update();
-
 }
 
 function create() {
     var name = document.getElementById('NewItem').value
     newItem(name)
     update()
-
-    // document.getElementById('lista')
-    // var item = document.createElement('li')
-    // item.innerText = name.value
-    // document.getElementById('lista').appendChild(item)
 }
-
-
 
 function remove_all() {
     window.localStorage.clear()
