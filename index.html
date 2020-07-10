@@ -16,21 +16,11 @@
 
 <body>
   <div id='container'>
-    <div id='cabecalho'>
-      <h1 id='welcome_text'>Bem vindo ao meu programa</h1>
-      <h4>Dev: MATEUS FLORENTINO</h4>
-      <div id="interactive">
-        <div id="new" class='interactive'>
-          <input type="text" id="NewItem" class='input' placeholder="nome do item">
-          <button onclick=create() class='btn'>novo</button>
-        </div>
-        <div id="delete" class='interactive'>
-          <input type="text" id="DeleteItem" class='input' placeholder="nome do item">
-          <button onclick=remove() class='btn'>deletar</button>
-        </div>
-      </div>
-
-
+    <div id="menu">
+      <input type="text" id="NewItem" class='input' placeholder="nome do item">
+      <button onclick=create() class='btn'>novo</button>
+      <button onclick=sortValor() class='btn'>ORDENAR POR VALOR</button>
+      <button onclick=update() class='btn'>ORDENAR POR NOME</button>
     </div>
     <div id="lista">
 

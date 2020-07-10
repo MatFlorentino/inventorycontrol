@@ -1,12 +1,23 @@
-function update() {
+function sortValor(){
+    update('valor')
+}
+
+function update(sort) {
+
+    let itens = showAll()
+    if(sort =='valor'){
+    itens = itens.sort((a,b) => b.valor - a.valor)
+    }
+    else{
+        itens = itens.sort((a,b) => a.nome < b.nome ? -1 : a.nome > b.nome ? 1 : 0)
+    }
+
     var container = document.getElementById('lista')
 
     if (!(container.innerText === "")) {
         container.innerHTML = "";
     }
-
-    const itens = showAll()
-
+ 
     itens.forEach((elemento) => {
 
         var container = document.createElement('div')
@@ -39,14 +50,21 @@ function update() {
         }
         btnContainer.appendChild(btn)
 
+        var btn = document.createElement('button')
+        btn.innerText = "deletar"
+        btn.className = 'btn'
+        btn.onclick = function () {
+            remove(elemento.nome)
+        }
+        btnContainer.appendChild(btn)
+
         container.appendChild(btnContainer)
         
         document.getElementById('lista').appendChild(container)
     })
 }
 
-function remove() {
-    var name = document.getElementById('DeleteItem').value
+function remove(name) {
     deleteItem(name)
     update()
 }
